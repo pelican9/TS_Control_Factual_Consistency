@@ -17,20 +17,27 @@ muss/resources includes BPE dictionary and datasets. muss/qualitative includes s
 
  
 ## Generate output
-To simplify custom sentence, first change the input file depends on what operation is conducted:
+To simplify custom sentence, first change the input file depends on what operation is conducted: (NE for Named Entity)
 ```
-if muss_output: # the input sentence has no prefix
+if muss_output: 
+  # the input sentence has no prefix
   complex_file_dir = '/content/drive/MyDrive/muss/scripts/contract_no_token.en'
-elif NE_output: # the input sentence has named entities in prefix
+  
+elif NE_output: 
+  # the input sentence has named entities in prefix
   complex_file_dir = '/content/drive/MyDrive/muss/scripts/contract_NE_token.en'
-elif CERF_output: # the input sentence has hard words in prefix
+  
+elif CERF_output: 
+  # the input sentence has hard words in prefix
   complex_file_dir = '/content/drive/MyDrive/muss/scripts/contract_ABCD_token.en'
-elif NE_CERF_output: # the input sentence has named entities and hard words in prefix
+  
+elif NE_CERF_output: 
+  # the input sentence has named entities and hard words in prefix
   complex_file_dir = '/content/drive/MyDrive/muss/scripts/contract_NE_ABCD_token.en'
 ```        
-Then define the dictionary that includes model path and the corresponding test set path in /generate.ipynb, then use function generate_output with sample=True and, say operation preserving is carried out, NE_output=True, to generate outputs.
+Then define the dictionary that includes model path and the corresponding test set path in **generate.ipynb**, then use function generate_output with sample=True and, say operation preserving is carried out, NE_output=True, to generate outputs.
 
-To simplify ASSET test set, first define the dictionary that includes model path and the corresponding test set path in /generate.ipynb, then use function generate_output to generate outputs.
+To simplify ASSET test set, first define the dictionary that includes model path and the corresponding test set path in **generate.ipynb**, then use function generate_output to generate outputs.
 
 The look up table for model is shown as below.
 | Operation                          | Model                          | Model ID |
