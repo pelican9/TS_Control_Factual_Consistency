@@ -1,0 +1,1 @@
+generate_kwargs {'hypothesis_num': 3, 'beam': 5, 'sampling': False}
