@@ -19,7 +19,7 @@ muss/resources includes BPE dictionary and datasets with different number of wor
 Download the folder bart_bpe, and create your dataset in muss/resources/datasets. And change the dataset name in **train.ipynb**.
 
 ## Generate output
-If you only want to do simplification on custom sentence, then download the model from muss/experiments is enough for generation. The look up table for model is shown below.
+First download a model from muss/experiments. The look up table for model is shown below.
 | Operation                          | Model                          | Model ID | Experiment ID|
 |------------------------------------|--------------------------------|----------|----------------|
 | Preserving                         | complex/complex                | 18       |local_1629593348299
@@ -31,7 +31,7 @@ If you only want to do simplification on custom sentence, then download the mode
 | Preserving                         | both/both                      | 39       |local_1629750798219
 | Lexical Simplification             | all pairs                      | 37       |local_1631390882572
 | Lexical Simplification             | filtered pairs                 | 38       |local_1631390826128
-| Preserving+ Lexical Simplification | simple/simple/filtered   pairs | 40       |local_1631567843618
+| Preserving+ Lexical Simplification | simple/simple/filtered pairs | 40       |local_1631567843618
 
 
 To simplify custom sentence, first change the input file depends on what operation is conducted: (NE for Named Entity)
